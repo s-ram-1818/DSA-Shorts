@@ -1,0 +1,41 @@
+1) Binary search
+
+Binary Search is a search algorithm used on sorted arrays (or ranges) to find the position of a target value.
+It repeatedly divides the search interval in half. (divide ad conquer algorithm)
+
+Precondition: Array must be sorted.
+
+| Case    | Time     | Space |
+| ------- | -------- | ----- |
+| Best    | O(1)     | O(1)  |
+| Average | O(log n) | O(1)  |	
+| Worst   | O(log n) | O(1)  |
+
+
+2) stack
+
+A stack is a linear data structure that follows the LIFO (Last In First Out) principle — the last element inserted is the first to be removed.
+Examples:
+Stack of plates,Undo feature in editors,Browser back button,Recursion call stack
+
+| Operation     | Description / Use                                      | Time Complexity |
+|---------------|--------------------------------------------------------|-----------------|
+| push(x)       | Add element x to the top of the stack                  | O(1)            |
+| pop()         | Remove the top element                                 | O(1)            |
+| peek() / top()| Get the top element without removing it                | O(1)            |
+| isEmpty()     | Check if the stack is empty                            | O(1)            |
+| size()        | Return the number of elements in the stack             | O(1)            |
+
+Monotonic Stack -> A monotonic stack is a stack that maintains elements in increasing or decreasing order.
+Stack in Recursion -> During recursion, function calls are stored in the call stack. Each recursive call is pushed onto the stack, and once the function completes, it's popped off. This allows the program to return to the correct previous state.
+
+
+
+
+
+
+
+
+
+
+
