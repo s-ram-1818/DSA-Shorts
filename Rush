@@ -1,3 +1,22 @@
+1) Bitwise manipulation
+
+| X | Y | X & Y | X | Y  | X ^ Y | ~X |
+| - | - | ----- | ------ | ----- | --- |
+| 0 | 0 | 0     | 0      | 0     | 1   |
+| 0 | 1 | 0     | 1      | 1     | 1   |
+| 1 | 0 | 0     | 1      | 1     | 0   |
+| 1 | 1 | 1     | 1      | 0     | 0   |
+
+| X | Y | Sum (X+Y) | Carry | Diff (X−Y) | Borrow |
+| - | - | --------- | ----- | ---------- | ------ |
+| 0 | 0 | 0         | 0     | 0          | 0      |
+| 0 | 1 | 1         | 0     | 1          | 1      |
+| 1 | 0 | 1         | 0     | 1          | 0      |
+| 1 | 1 | 0         | 1     | 0          | 0      |
+
+
+
+
 1) Binary search
 
 Binary Search is a search algorithm used on sorted arrays (or ranges) to find the position of a target value.
