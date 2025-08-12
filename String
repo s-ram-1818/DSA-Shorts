@@ -1,0 +1,4 @@
+| Function  | Searches for                               | Direction of search         | Example                                                   |
+| --------- | ------------------------------------------ | --------------------------- | --------------------------------------------------------- |
+| `find()`  | First occurrence of substring or character | Left → Right (start to end) | `if (s.find("abc") != std::string::npos) { /* found */ }` |
+| `rfind()` | Last occurrence of substring or character  | Right → Left (end to start) | `if (s.rfind('x') != std::string::npos) { /* found */ }`  |
