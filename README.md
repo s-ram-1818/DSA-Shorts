@@ -169,9 +169,3 @@
 
 ---
 
-## 📝 Notes
-- **`npos`** = `string::npos` means “not found” (max `size_t` value).
-- **Dynamic growth** — string resizes automatically.
-- **0-based indexing**.
-- **Iterator invalidation** — insert/erase can make iterators invalid.
-
