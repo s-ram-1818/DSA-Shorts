@@ -1,4 +1,11 @@
+# 📌 C++ `std::string` STL – Complete Cheat Sheet
 
+---
+
+<details>
+<summary>1️⃣ Initialization</summary>
+
+```cpp
 string s;                      // Empty string
 string s("hello");             // From C-string literal
 string s(5, 'x');              // "xxxxx"
@@ -71,3 +78,5 @@ s.rend();      // Reverse iterator before first char
 
 getline(cin, s);    // Read line
 swap(s1, s2);       // Swap strings
+
+<details>
