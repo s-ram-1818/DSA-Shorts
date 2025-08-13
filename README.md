@@ -1,11 +1,4 @@
-# 📌 C++ `std::string` STL – Complete Cheat Sheet
 
----
-
-<details>
-<summary>1️⃣ Initialization</summary>
-
-```cpp
 string s;                      // Empty string
 string s("hello");             // From C-string literal
 string s(5, 'x');              // "xxxxx"
