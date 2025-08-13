@@ -1,4 +1,4 @@
-# 📌 C++ `std::string` STL – Complete Cheat Sheet (Mobile-Friendly)
+# 📌 String
 
 ---
 
