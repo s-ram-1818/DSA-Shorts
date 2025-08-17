@@ -1,0 +1,51 @@
+| **Algorithm**      | **Best Case** | **Average Case** | **Worst Case** | **Space Complexity** | **Stable?** |
+| ------------------ | ------------- | ---------------- | -------------- | -------------------- | ----------- |
+| **Bubble Sort**    | O(n)          | O(n²)            | O(n²)          | O(1)                 | ✅ Yes       |
+| **Insertion Sort** | O(n)          | O(n²)            | O(n²)          | O(1)                 | ✅ Yes       |
+| **Selection Sort** | O(n²)         | O(n²)            | O(n²)          | O(1)                 | ❌ No        |
+| **Merge Sort**     | O(n log n)    | O(n log n)       | O(n log n)     | O(n)                 | ✅ Yes       |
+| **Quick Sort**     | O(n log n)    | O(n log n)       | O(n²)          | O(log n) (stack)     | ❌ No        |
+| **Heap Sort**      | O(n log n)    | O(n log n)       | O(n log n)     | O(1)                 | ❌ No        |
+
+1. Bubble Sort – Repeatedly swap adjacent elements if they are in the wrong order.
+void bubbleSort(vector<int>& arr) {
+    int n = arr.size();
+    bool swapped;
+    for (int i = 0; i < n - 1; i++) {
+        swapped = false;
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {  // swap if out of order
+                swap(arr[j], arr[j + 1]);
+                swapped = true;
+            }
+        }
+        if (!swapped) break; // stop if already sorted
+    }
+}
+
+2. Insertion Sort – Insert each element into its correct position in the sorted part of the array.
+void insertionSort(vector<int>& arr) {
+    int n = arr.size();
+    for (int i = 1; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key) {  // shift larger elements to right
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key; // place key in correct spot
+    }
+}
+3. Selection Sort – Select the smallest element and put it in the correct position.
+void selectionSort(vector<int>& arr) {
+    int n = arr.size();
+    for (int i = 0; i < n - 1; i++) {
+        int minIdx = i;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIdx]) {  // find smallest element
+                minIdx = j;
+            }
+        }
+        swap(arr[i], arr[minIdx]); // place it at correct position
+    }
+}
