@@ -51,6 +51,8 @@ void selectionSort(vector<int>& arr) {
 }
 
 4. Merge Sort – A divide & conquer algorithm that splits the array into halves, sorts them, and merges back.
+- Suitable when memory writes are costly (minimizes swaps).
+- Useful in embedded systems with limited memory writes
 void merge(int arr[], int left, int mid, int right) {
     int n1 = mid - left + 1;
     int n2 = right - mid;
