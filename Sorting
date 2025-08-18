@@ -7,6 +7,9 @@
 | **Quick Sort**     | O(n log n)    | O(n log n)       | O(n²)          | O(log n) (stack)     | ❌ No        | ✅ Yes         |
 | **Heap Sort**      | O(n log n)    | O(n log n)       | O(n log n)     | O(1)                 | ❌ No        | ✅ Yes         |
 
+Stable = Order-preserving
+In-place = Space-saving
+
 
 1. Bubble Sort – Repeatedly swap adjacent elements if they are in the wrong order.
 void bubbleSort(vector<int>& arr) {
