@@ -54,7 +54,7 @@ void selectionSort(vector<int>& arr) {
     }
 }
 
-4. stable sort - is a sorting algorithm that preserves the relative order of equal elements
+4. stable sort - is a sorting algorithm that preserves the relative order of equal elements->only use merge
  vector<pair<int,string>> v = {
         {2,"apple"}, {1,"mango"}, {2,"banana"}, {1,"orange"}
     };
@@ -166,3 +166,8 @@ void quickSort(int arr[], int s, int e) {
     quickSort(arr, p+1, e);
 
 }
+
+STD::sort
+Start → QuickSort partitions.
+Some partitions shrink below 16 elements → InsertionSort handles them.
+If unlucky pivot choices cause deep recursion → switch to HeapSort for safety.
