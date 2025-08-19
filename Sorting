@@ -6,6 +6,8 @@
 | **Merge Sort**     | O(n log n)    | O(n log n)       | O(n log n)     | O(n)                 | ✅ Yes       | ❌ No          |
 | **Quick Sort**     | O(n log n)    | O(n log n)       | O(n²)          | O(log n) (stack)     | ❌ No        | ✅ Yes         |
 | **Heap Sort**      | O(n log n)    | O(n log n)       | O(n log n)     | O(1)                 | ❌ No        | ✅ Yes         |
+| **Counting Sort**  | O(n + k)      | O(n + k)         | O(n + k)       | O(n + k)             | ✅ Yes       | ❌ No          |
+
 
 Stable = Order-preserving
 In-place = Space-saving
@@ -166,6 +168,35 @@ void quickSort(int arr[], int s, int e) {
     quickSort(arr, p+1, e);
 
 }
+
+7.Counting Sort – Count occurrences of elements and place them directly in sorted order (works best when range is small).
+
+void countingSort(vector<int>& arr) {
+    int n = arr.size();
+    int maxVal = *max_element(arr.begin(), arr.end());
+    int minVal = *min_element(arr.begin(), arr.end());
+    int range = maxVal - minVal + 1;
+
+    vector<int> count(range, 0), output(n);
+
+    // Step 1: Count frequency
+    for (int i = 0; i < n; i++)
+        count[arr[i] - minVal]++;
+
+    // Step 2: Prefix sum
+    for (int i = 1; i < range; i++)
+        count[i] += count[i - 1];
+
+    // Step 3: Build output (stable)
+    for (int i = n - 1; i >= 0; i--) {
+        output[count[arr[i] - minVal] - 1] = arr[i];
+        count[arr[i] - minVal]--;
+    }
+
+    // Step 4: Copy result
+    arr = output;
+}
+
 
 STD::sort
 Start → QuickSort partitions.
