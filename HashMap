@@ -1,0 +1,17 @@
+Hashmap:
+A HashMap is a data structure in which the elements are stored in key-value pairs such that every key is mapped to a value using a hash function
+
+| Feature                 | **map**                                                    | **unordered\_map**                                                                        |
+| ----------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| **Underlying DS**       | Balanced Binary Search Tree (Red-Black Tree)               | Hash Table                                                                                |
+| **Order of keys**       | Stores keys in **sorted order** (ascending by default)     | Stores keys in **no particular order**                                                    |
+| **Time Complexity**     | O(log n) for insertion, deletion, search                   | O(1) average, O(n) worst (due to collisions)                                              |
+| **Traversal**           | In sorted order                                            | In arbitrary order                                                                        |
+| **Duplicates allowed?** | No (but `multimap` allows)                                 | No (but `unordered_multimap` allows)                                                      |
+| **Best Use Case**       | When sorted data is required (e.g., ranking, leaderboards) | When fast access is required and order doesn’t matter (e.g., dictionary, frequency count) |
+
+- we can't use pair as a key in unordered map but can be use in map
+
+What is Collision?-Collision = when different keys land in the same slot of a hash table.
+-In a hash table (unordered_map), every key is mapped to an index (bucket) using a hash function.
+-A collision occurs when two different keys are mapped to the same bucket/index.
