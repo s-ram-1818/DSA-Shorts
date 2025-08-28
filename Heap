@@ -1,0 +1,82 @@
+# Save the heap notes into a plain text file for GitHub upload
+
+heap_notes_text = """HEAPS – INTERVIEW NOTES
+
+1. Basics
+-----------
+- Heap: A complete binary tree that satisfies the heap property.
+- Types:
+  - Max-Heap → parent ≥ children
+  - Min-Heap → parent ≤ children
+- Stored as an array:
+  - arr[0] = root
+  - For index i:
+    - left = 2*i + 1
+    - right = 2*i + 2
+    - parent = (i-1)/2
+
+2. Operations
+--------------
+- Heapify: O(log n)
+- Build Heap: O(n)
+- Insert: O(log n)
+- Delete/Extract: O(log n)
+- Peek: O(1)
+
+Steps:
+- Insert: Add at end, bubble up
+- Delete: Swap root with last, remove last, heapify down
+
+3. Applications
+----------------
+- Heap Sort (O(n log n))
+- Priority Queue (scheduling, Dijkstra’s, Prim’s)
+- Median in a stream (2 heaps)
+- Kth smallest/largest element
+- Merge K sorted arrays/lists
+- Top-K frequent elements
+- Interval problems (meeting rooms, CPU load)
+
+4. Complexities
+----------------
+Insert     O(log n)
+Delete     O(log n)
+Peek       O(1)
+Build Heap O(n)
+Heap Sort  O(n log n)
+
+5. C++ Custom Comparator Example
+---------------------------------
+priority_queue<int, vector<int>, greater<int>> minHeap;
+priority_queue<int> maxHeap; // default
+
+struct cmp {
+    bool operator()(pair<int,int> &a, pair<int,int> &b) {
+        return a.second > b.second; // min-heap by .second
+    }
+};
+priority_queue<pair<int,int>, vector<pair<int,int>>, cmp> pq;
+
+6. Common Interview Questions
+------------------------------
+1. Kth largest/smallest element
+2. Merge K sorted arrays/lists
+3. Find median from data stream
+4. Connect ropes with minimum cost
+5. Top K frequent elements
+6. Sliding Window Maximum
+7. Minimum spanning tree (Prim’s)
+8. Dijkstra’s shortest path
+
+7. Key Tips
+------------
+- Array representation is crucial.
+- Build Heap = O(n), not O(n log n).
+- Applications in scheduling, graphs, and frequency problems.
+- Be ready to implement heapify, insert, and extract operations.
+"""
+
+with open("/mnt/data/heaps_interview_notes.txt", "w") as f:
+    f.write(heap_notes_text)
+
+"/mnt/data/heaps_interview_notes.txt"
