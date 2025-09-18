@@ -72,4 +72,43 @@ int main() {
     for (auto &st : students) {
         cout << st.name << " " << st.marks << "\n";
     }
+}'
+
+
+%% Priority queue
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// Functor to compare pairs by their second value
+class ComparePairs {
+public:
+    bool operator()(const pair<char, int> &a, const pair<char, int> &b) {
+        return a.second > b.second; 
+        // Min-heap: smaller 'second' value has higher priority
+    }
+};
+
+int main() {
+    // Syntax: priority_queue<Type, Container, Comparator>
+    priority_queue<pair<char, int>, vector<pair<char, int>>, ComparePairs> pq;
+
+    pq.push({'a', 2});
+    pq.push({'b', 5});
+    pq.push({'c', 3});
+
+    cout << "Min Heap of Pairs (sorted by second):\n";
+    while (!pq.empty()) {
+        cout << pq.top().first << " " << pq.top().second << "\n";
+        pq.pop();
+    }
+
+    return 0;
 }
+
+Min Heap of Pairs (sorted by second):
+a 2
+c 3
+b 5
+
+
